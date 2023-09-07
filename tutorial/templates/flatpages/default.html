@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ flatpage.title }}</title>
+
+    {% load static %}
+    <link href="{% static 'css/styles1.css' %}" rel="stylesheet"/> 
+</head>
+<body class="body">
+    <header class="header">
+        <div>
+            <a class="logo" href="/">FlatPages</a>
+        </div>
+        <div></div>
+        <nav class="navigation">
+            <a class="nav-item" href="/home">КУРСИВ</a>
+            <a class="nav-item" href="/about">ПОВТОР</a>
+            <a class="nav-item" href="/contacts">АДМИН (only)</a>
+        </nav>
+    </header>
+    <div class="content">
+        <div class="title-box">
+            <span class="title-text">
+                <h1>{{ flatpage.title }}</h1>
+                <hr class="hr-title">
+            </span>
+        </div>
+        {% block content %}{% endblock content %}
+    </div>
+</body>
+</html>
